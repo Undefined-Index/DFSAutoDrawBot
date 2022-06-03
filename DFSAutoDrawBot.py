@@ -117,7 +117,7 @@ def dfs(img, x, y, first, count=0):
             pyautogui.moveTo(width + y, height + x + jd)
             if mouse_judge == True:
                 pyautogui.mouseDown()
-            img[x + jd, y] = jd
+            img[x + jd, y] = 1
             busy_sleep()
             dfs(img, x + jd, y, False, count)
     return None
